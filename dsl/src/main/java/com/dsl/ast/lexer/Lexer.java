@@ -4,7 +4,7 @@ import com.dsl.ast.token.Token;
 
 public class Lexer {
 	
-	protected final String text = null;
+	protected String text = null;
     protected int          pos;
     protected char         ch;
 
@@ -17,8 +17,13 @@ public class Lexer {
     
     protected Double       doubleVal;
 
-    protected int          commentCount = 0;
-    protected boolean      skipComment  = true;
+    
+    public Lexer(String input){
+        this.text = input;
+    }
+    
+    
+    
 
 
 }
