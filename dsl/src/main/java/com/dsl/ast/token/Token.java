@@ -4,7 +4,14 @@ public enum Token {
 	
 	EOF, 
 	ERROR,
+	IDENTIFIER,
+	VARIANT,
+	LITERAL_DOUBLE,
+	LITERAL_STRING,
+	LITERAL_BOOLEAN,
 	
+	FUNCTION("function"),
+	REFERENCE("$"),
 	COMMENT("#"),
 	END(";"),
 	LPAREN("("), 
