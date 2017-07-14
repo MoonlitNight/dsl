@@ -7,6 +7,8 @@ import com.dsl.ast.lexer.Lexer;
 
 public class Parser {
 	
+	protected static Map<String,Object> referenceMap = new HashMap<>();
+	
 	protected static Map<String,Object> variableMap = new HashMap<>();
 	
 	protected static Lexer lexer;
@@ -23,5 +25,9 @@ public class Parser {
 
 	public static Object getVariable(String name){
 		return variableMap.get(name);
+	}
+	
+	public static void addReference(String name,Object value){
+		referenceMap.put(name, value);
 	}
 }

@@ -16,6 +16,7 @@ public enum Token {
 	
 	IDENTIFIER("var"),
 	FUNCTION("function"),
+	RETURN("return"),
 	REFERENCE("$"),
 	COMMENT("#"),
 	END(";"),
