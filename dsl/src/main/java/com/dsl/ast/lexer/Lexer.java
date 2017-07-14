@@ -149,8 +149,7 @@ public class Lexer {
                         scanOperator();
                         return;
                     }
-                    // QS_TODO ?
-                    if (isEOF()) { // JLS
+                    if (isEOF()) { 
                         token = Token.EOF;
                     } else {
                         lexError("illegal.char", String.valueOf((int) ch));
@@ -187,7 +186,7 @@ public class Lexer {
         if (tok != null) {
             token = tok;
         } else {
-            token = Token.IDENTIFIER;
+            token = Token.VARIANT;
         }
     }
     

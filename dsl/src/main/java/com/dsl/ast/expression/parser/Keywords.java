@@ -27,7 +27,6 @@ public class Keywords {
     }
 
     public Token getKeyword(String key) {
-        key = key.toUpperCase();
         return keywords.get(key);
     }
 
