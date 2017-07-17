@@ -64,7 +64,7 @@ public class Lexer {
                 continue;
             }
             
-            if (CharTypes.isLetterDigitOrChinese(ch)) {
+            if (CharTypes.isLetterOrChinese(ch)) {
                 scanIdentifier();
                 return;
             }
@@ -163,7 +163,7 @@ public class Lexer {
     
     public void scanIdentifier() {
         final char first = ch;
-        final boolean firstFlag = CharTypes.isLetterDigitOrChinese(first);
+        final boolean firstFlag = CharTypes.isLetterOrChinese(first);
         if (!firstFlag) {
             throw new RuntimeException("illegal identifier");
         }
@@ -172,7 +172,7 @@ public class Lexer {
         char ch;
         for (;;) {
             ch = charAt(++pos);
-            if (!CharTypes.isLetterDigitOrChinese(ch)) {
+            if (!CharTypes.isLetterOrChinese(ch)) {
                 break;
             }
             bufPos++;

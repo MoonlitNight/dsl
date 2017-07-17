@@ -69,8 +69,8 @@ public class CharTypes {
                || c == '　'; // Chinese space
     }
     
-    public static boolean isLetterDigitOrChinese(char ch) {
-	  String regex = "[a-z0-9A-Z\u4e00-\u9fa5]";
+    public static boolean isLetterOrChinese(char ch) {
+	  String regex = "[a-zA-Z\u4e00-\u9fa5]";
 	  String str = new StringBuffer().append(ch).toString();
 	  return str.matches(regex);
 	 }
