@@ -1,6 +1,11 @@
 package com.dsl.ast.expression;
 
-public class StringExpression {
+public class StringExpression implements Expression {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -266462524732823342L;
 	
 	private String stringVal;
 

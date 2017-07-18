@@ -1,4 +1,4 @@
-package com.dsl.ast.expression.parser;
+package com.dsl.ast.parser;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,8 +13,9 @@ public class Keywords {
 
     static {
         Map<String, Token> map = new HashMap<String, Token>();
-        map.put("var", Token.IDENTIFIER);
-        map.put("function", Token.FUNCTION);
+        map.put("var", Token.VAR);
+        map.put("true", Token.TRUE);
+        map.put("false", Token.FALSE);
         DEFAULT_KEYWORDS = new Keywords(map);
     }
 

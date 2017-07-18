@@ -1,6 +1,11 @@
 package com.dsl.ast.expression;
 
-public class BooleanExpression {
+public class BooleanExpression implements Expression  {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5733523758806729881L;
 	
 	private Boolean booleanVal;
 

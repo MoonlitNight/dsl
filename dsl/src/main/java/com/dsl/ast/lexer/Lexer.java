@@ -2,9 +2,9 @@ package com.dsl.ast.lexer;
 
 import java.util.Arrays;
 
-import com.dsl.ast.expression.parser.CharTypes;
-import com.dsl.ast.expression.parser.Keywords;
-import com.dsl.ast.expression.parser.LayoutCharacters;
+import com.dsl.ast.parser.CharTypes;
+import com.dsl.ast.parser.Keywords;
+import com.dsl.ast.parser.LayoutCharacters;
 import com.dsl.ast.token.Token;
 
 public class Lexer {
@@ -128,6 +128,10 @@ public class Lexer {
                     scanChar();
                     token = Token.SEMI;
                     return;
+                case ':':
+                    scanChar();
+                    token = Token.COLON;
+                    return;
                 case '\"':
                     scanString();
                     return;
@@ -186,7 +190,7 @@ public class Lexer {
         if (tok != null) {
             token = tok;
         } else {
-            token = Token.VARIANT;
+            token = Token.IDENTIFIER;
         }
     }
     
@@ -373,6 +377,7 @@ public class Lexer {
             case '=':
             case '>':
             case '|':
+            case ';':
                 return true;
             default:
                 return false;
@@ -523,6 +528,14 @@ public class Lexer {
 
 	public void setCommentCount(int commentCount) {
 		this.commentCount = commentCount;
+	}
+
+	public int getPos() {
+		return pos;
+	}
+
+	public int getLine() {
+		return line;
 	}
 
 }

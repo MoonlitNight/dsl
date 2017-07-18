@@ -1,20 +1,16 @@
 package com.dsl.ast.expression;
 
-/**
- * 
- * @author jin.wang
- *
- */
-public class VariableExpression implements Expression {
-
+public class ReferenceExpression implements Expression {
+	
+	
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 6279238338993454494L;
-
+	private static final long serialVersionUID = -2730903801707940618L;
+	
 	private String name;
 
-	public VariableExpression(String name) {
+	public ReferenceExpression(String name) {
 		super();
 		this.name = name;
 	}
@@ -26,5 +22,5 @@ public class VariableExpression implements Expression {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+
 }
