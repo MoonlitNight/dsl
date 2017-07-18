@@ -5,6 +5,11 @@ import java.util.Map;
 
 import com.dsl.ast.token.Token;
 
+/**
+ * 
+ * @author jin.wang
+ *
+ */
 public class Keywords {
 
     private final Map<String, Token> keywords;

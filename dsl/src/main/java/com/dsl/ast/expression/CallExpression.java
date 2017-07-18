@@ -1,6 +1,12 @@
 package com.dsl.ast.expression;
 
 import java.util.List;
+
+/**
+ * 调用表达式
+ * @author jin.wang
+ *
+ */
 public class CallExpression implements Expression {
 	
 	/**

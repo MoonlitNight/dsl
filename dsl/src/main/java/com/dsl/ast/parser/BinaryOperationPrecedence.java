@@ -5,6 +5,11 @@ import java.util.Map;
 
 import com.dsl.ast.token.Token;
 
+/**
+ * 优先级列表
+ * @author jin.wang
+ *
+ */
 public class BinaryOperationPrecedence {
 	
 	private static final Map<Token,Integer> binopPrecedence = new HashMap<>();

@@ -1,5 +1,10 @@
 package com.dsl.ast.expression;
 
+/**
+ * 数字
+ * @author jin.wang
+ *
+ */
 public class NumberExpression implements Expression {
 
 	/**

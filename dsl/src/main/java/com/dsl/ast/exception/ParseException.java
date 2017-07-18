@@ -1,5 +1,10 @@
 package com.dsl.ast.exception;
 
+/**
+ * 解析异常
+ * @author jin.wang
+ *
+ */
 public class ParseException extends RuntimeException {
 
 	/**

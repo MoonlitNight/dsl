@@ -1,5 +1,10 @@
 package com.dsl.ast.expression;
 
+/**
+ * 字符串
+ * @author jin.wang
+ *
+ */
 public class StringExpression implements Expression {
 	
 	/**

@@ -1,6 +1,11 @@
 package com.dsl.ast.expression;
 
 
+/**
+ * 二元表达式
+ * @author jin.wang
+ *
+ */
 public class BinaryExpression implements Expression {
 	
 	/**

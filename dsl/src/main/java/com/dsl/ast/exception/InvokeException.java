@@ -1,5 +1,10 @@
 package com.dsl.ast.exception;
 
+/**
+ * 调用异常
+ * @author jin.wang
+ *
+ */
 public class InvokeException extends RuntimeException {
 
 	/**

@@ -7,6 +7,11 @@ import com.dsl.ast.parser.Keywords;
 import com.dsl.ast.parser.LayoutCharacters;
 import com.dsl.ast.token.Token;
 
+/**
+ * 
+ * 由阿里连接池durid提取修改
+ *
+ */
 public class Lexer {
 	
 	protected String text = null;

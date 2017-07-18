@@ -1,5 +1,10 @@
 package com.dsl.ast.expression;
 
+/**
+ * 引用
+ * @author jin.wang
+ *
+ */
 public class ReferenceExpression implements Expression {
 	
 	

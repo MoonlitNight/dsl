@@ -1,5 +1,10 @@
 package com.dsl.ast.exception;
 
+/**
+ * 引用异常
+ * @author jin.wang
+ *
+ */
 public class ReferenceException extends RuntimeException {
 
 	

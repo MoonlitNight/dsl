@@ -27,7 +27,7 @@ import com.dsl.ast.lexer.Lexer;
 import com.dsl.ast.token.Token;
 
 /**
- * 
+ * 解析类
  * @author jin.wang
  *
  */
@@ -42,19 +42,34 @@ public class Parser {
 	private Lexer lexer = null;
 	private Token token= null;
 	
-	public void execute(String input) {
+	
+	/**
+	 * 脚本执行入口 <br>
+	 * 默认返回最后一个表达式的执行结果<br>
+	 * 如需获取更多<br>
+	 * 请定义为变量<br>
+	 * 从变量列表中获取<br>
+	 * @param input
+	 * @return
+	 */
+	public Object execute(String input) {
 		lexer = new Lexer(input);
 		Script script = createScript();
-		executeScript(script);
+		return executeScript(script);
 	}
 	
-	private void executeScript(Script script) {
+	private Object executeScript(Script script) {
 		List<Expression> body = script.getBody();
 		if(body==null||body.isEmpty())
-			return;
+			return null;
+		List<Expression> trace = new ArrayList<>();
 		for (Expression exp : body) {
-			execute(exp);
+			Expression result = execute(exp);
+			trace.add(result);
 		}
+		if(trace.isEmpty())
+			return null;
+		return processResult(trace.get(trace.size()-1));
 	}
 
 	private Expression execute(Expression expression) {

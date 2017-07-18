@@ -1,5 +1,10 @@
 package com.dsl.ast.expression;
 
+/**
+ * 取反表达式
+ * @author jin.wang
+ *
+ */
 public class BangExpression implements Expression {
 
 	/**

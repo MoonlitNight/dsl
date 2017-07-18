@@ -1,5 +1,10 @@
 package com.dsl.ast.expression;
 
+/**
+ * 变量
+ * @author jin.wang
+ *
+ */
 public class VarExpression implements Expression {
 	
 	/**

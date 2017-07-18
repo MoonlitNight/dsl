@@ -1,5 +1,10 @@
 package com.dsl.ast.exception;
 
+/**
+ * 语法异常
+ * @author jin.wang
+ *
+ */
 public class SyntaxException extends RuntimeException {
 
 	/**

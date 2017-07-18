@@ -51,7 +51,8 @@ public class ScriptTest {
 		parser.registerReference("变量1", 20);
 		parser.registerReference("变量2", 12);
 		parser.registerHandler(new BusinessFunctionImpl());
-		parser.execute(text);
+		Object result = parser.execute(text);
+		System.out.println(result);
 		System.out.println(parser.getVariable("xx"));
 		System.out.println(parser.getVariable("yy"));
 	}

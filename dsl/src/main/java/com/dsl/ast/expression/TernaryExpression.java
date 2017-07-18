@@ -1,5 +1,10 @@
 package com.dsl.ast.expression;
 
+/**
+ * 三元运算
+ * @author jin.wang
+ *
+ */
 public class TernaryExpression implements Expression {
 
 	/**

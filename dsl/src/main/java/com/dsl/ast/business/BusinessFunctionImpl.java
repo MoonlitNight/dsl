@@ -1,5 +1,10 @@
 package com.dsl.ast.business;
 
+/**
+ * 测试实现类
+ * @author jin.wang
+ *
+ */
 public class BusinessFunctionImpl implements BusinessFunction {
 
 	@Override

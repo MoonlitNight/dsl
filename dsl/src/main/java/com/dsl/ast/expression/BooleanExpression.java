@@ -1,5 +1,10 @@
 package com.dsl.ast.expression;
 
+/**
+ * 布尔类型
+ * @author jin.wang
+ *
+ */
 public class BooleanExpression implements Expression  {
 	
 	/**

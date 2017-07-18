@@ -4,6 +4,11 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 脚本
+ * @author jin.wang
+ *
+ */
 public class Script implements Serializable {
 	
 	/**
