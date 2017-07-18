@@ -313,7 +313,7 @@ public class Parser {
 			return null;
 		if(result instanceof Integer||result instanceof Long||result instanceof Double)
 			return new NumberExpression(Double.valueOf(result.toString()));
-		if(result instanceof StringExpression)
+		if(result instanceof String)
 			return new StringExpression(result.toString());
 		if(result instanceof Boolean)
 			return new BooleanExpression(Boolean.valueOf(result.toString()));
