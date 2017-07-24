@@ -171,10 +171,36 @@ public class Parser {
 		case "!=":
 			result = bangEQOperation(lhs,rhs);
 			break;
+		case "&&":
+			result = ampAmpOperation(lhs,rhs);
+			break;
+		case "||":
+			result = barBarOperation(lhs,rhs);
+			break;
 		default:
 			throw new ParseException("unsupported expression!");
 		}
 		return packageResult(result);
+	}
+	
+	private Object barBarOperation(Expression lhs, Expression rhs) {
+		if(lhs instanceof BooleanExpression&&rhs instanceof BooleanExpression){
+			BooleanExpression left = (BooleanExpression)lhs;
+			BooleanExpression right = (BooleanExpression)rhs;
+			return left.getBooleanVal()||right.getBooleanVal();
+		} else {
+			throw new ParseException("expression error");
+		}
+	}
+
+	private Object ampAmpOperation(Expression lhs, Expression rhs) {
+		if(lhs instanceof BooleanExpression&&rhs instanceof BooleanExpression){
+			BooleanExpression left = (BooleanExpression)lhs;
+			BooleanExpression right = (BooleanExpression)rhs;
+			return left.getBooleanVal()&&right.getBooleanVal();
+		} else {
+			throw new ParseException("expression error");
+		}
 	}
 	
 	private Object bangEQOperation(Expression lhs, Expression rhs) {
